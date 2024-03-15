@@ -43,9 +43,19 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 5 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //5.Atspausdinkite 3čio uždavinio kiekvieną augalą pradedant nuo paskutinio, ir baigiant pirmuoju.
 // (atvirkščias ciklas).
+        for (int i = 10 - 1; i >= 0; i--) {
+            System.out.println(plants[i]);
+        }
 
-
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 6 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //6.Atspausdinkite kas antrą skaičių nuo 10 iki 50 (porinius);
+
+        for (int i = 10; i < 51; i++) {
+           if (i % 2 != 0){
+               continue;
+           }
+            System.out.println(i);
+        }
 //7.Atspausdinkite kas antrą skaičių nuo 10 iki 50. (porinius) Jei skaičius dalinasi iš 10 be liekanos jo nespausdinkite. ( naudokite continue.) (atspausdinti visus porinus skaičius, išskyrus tuos kurie dalinasi iš 10 be liekanos)
 //8.Sukurkite ciklą kuris suktųsi nuo 0 iki 20. Suskaičiuokite, kiek kartų kintamasis i turėjo porinę reikšmę;
 //9.Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių trumpesnių nei 5 simboliai, ir kiek ilgesnių nei 7 simboliai. (du skaičiavimai)
