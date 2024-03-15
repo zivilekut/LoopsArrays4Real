@@ -79,13 +79,49 @@ public class Main {
             counter++;
             System.out.println(i);
 
-        } System.out.println("count:" + counter);
+        }
+        System.out.println("count:" + counter);
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 9 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //9.Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių trumpesnių nei 5 simboliai, ir kiek ilgesnių nei 7 simboliai.
 // (du skaičiavimai)
 
-//10.Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai bet trumpesnių  nei 10 simboliai. (tarp 5 ir 10 simbolių ilgio)
+        int count5 = 0;
+        for (String plant : plants) {
+            if (plant.length() < 5) {
+                count5++;
+            }
+
+        }
+
+        System.out.println("Number of words with less than 5 characters: " + count5);
+
+        int count7 = 0;
+        for (String plant : plants) {
+            if (plant.length() > 7) {
+                count7++;
+            }
+
+        }
+
+        System.out.println("Number of words with more than 7 characters: " + count7);
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 10 užduotis ~~~~~~~~~~~~~~~~~~~~");
+//10.Suskaičiuokite kiek 3čio uždavinio masyve yra žodžių ilgesnių nei 5 simboliai bet trumpesnių  nei 10 simboliai.
+// (tarp 5 ir 10 simbolių ilgio)
+
+        int count = 0;
+        for (String plant : plants) {
+            if (plant.length() > 5 && plant.length() < 10) {
+                count++;
+            }
+
+        }
+
+        System.out.println("Number of words with more than 5 but less than 10 characters: " + count);
+
+
+
 
 
     }
