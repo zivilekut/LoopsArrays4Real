@@ -152,14 +152,14 @@ public class Main {
 //2. Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius
 // atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti.
 
-        boolean isLast = false;
+        boolean notFirst = false;
         for (int i = 1; i < 3001; i++) {
             if (i % 77 == 0) {
-                if (isLast) {
+                if (notFirst) {
                     System.out.print(", ");
                 }
                 System.out.print(i);
-                isLast = true;
+                notFirst = true;
             }
         }
 
