@@ -126,6 +126,27 @@ public class Main {
 //1. Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite
 // kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti atspausdinti skliausteliuose” [ ] “.
 
+        int arraySize = 300;
+        int[] randomArray = new int[arraySize];
+        for (int i = 0; i < arraySize; i++) {
+            randomArray[i] = (int) Math.round(Math.random() * 300);
+            ;
+        }
+        System.out.println("Random assigned values of Array are: ");
+
+        int countLarger150 = 0;
+        for (int value : randomArray) {
+            if (value > 275) {
+                System.out.print("[" + value + "] ");
+            } else {
+                System.out.print(value + " ");
+            }
+            if (value > 150) {
+                countLarger150++;
+            }
+        }
+        System.out.println();
+        System.out.println("# of numbers that are larger than 150: " + countLarger150);
 
 
 //2. Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti.
@@ -156,14 +177,6 @@ public class Main {
 //a) “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
 //b) “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
 //9. Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
-
-
-
-
-
-
-
-
 
 
     }
