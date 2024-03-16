@@ -148,8 +148,21 @@ public class Main {
         System.out.println();
         System.out.println("# of numbers that are larger than 150: " + countLarger150);
 
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 2 užduotis ~~~~~~~~~~~~~~~~~~~~");
+//2. Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius
+// atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti.
 
-//2. Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti.
+        boolean isLast = false;
+        for (int i = 1; i < 3001; i++) {
+            if (i % 77 == 0) {
+                if (isLast) {
+                    System.out.print(", ");
+                }
+                System.out.print(i);
+                isLast = true;
+            }
+        }
+
 //3. Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
 //* * * * * * * * * * *
 //* * * * * * * * * * *
