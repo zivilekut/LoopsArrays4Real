@@ -162,7 +162,8 @@ public class Main {
                 notFirst = true;
             }
         }
-
+        System.out.println();
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //3. Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
 //* * * * * * * * * * *
 //* * * * * * * * * * *
@@ -171,6 +172,15 @@ public class Main {
 //* * * * * * * * * * *
 //* * * * * * * * * * *
 //* * * * * * * * * * *
+
+        for (int y = 0; y < 25; y++) {
+            for (int x = 0; x < 25; x++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 4 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //4. Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
 //* * * * * * *
 //* * * * * * *
