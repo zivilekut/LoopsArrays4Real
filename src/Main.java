@@ -173,12 +173,20 @@ public class Main {
 //* * * * * * * * * * *
 //* * * * * * * * * * *
 
-        for (int y = 0; y < 25; y++) {
-            for (int x = 0; x < 25; x++) {
-                System.out.print("* ");
+        int rows = 25;
+        int columns = 25;
+
+        String[][] square = new String[rows][columns];
+
+        String asterisk = "* ";
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                square[i][j] = asterisk;
+                System.out.print(square[i][j]);
             }
             System.out.println();
         }
+
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 4 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //4. Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
@@ -189,6 +197,7 @@ public class Main {
 //* * * * * * *
 //* * * * * * *
 //* * * * * * *
+
 //5. Metam monetą. Monetos kritimo rezultatą imituojam Math.random() funkcija, kur 0 yra herbas, o 1 - skaičius. Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas. Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
 //a) Iškritus herbui;
 //b) Tris kartus iškritus herbui;
