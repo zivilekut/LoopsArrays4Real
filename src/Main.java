@@ -291,11 +291,32 @@ public class Main {
         System.out.print("Kazio taškai: " + kazysTotal);
         System.out.println();
 
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 7 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //7. Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas),
 // kurio aukštis 21 eilutė.
 
         int numRows = 21;
+        int spaces = numRows / 2;
+        int asterisks = 1;
+        for (int i = 1; i <= numRows; i++) {
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
 
+            for (int j = 1; j <= asterisks; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            if (i <= numRows / 2) {
+                spaces--;
+                asterisks += 2;
+            } else {
+                spaces++;
+                asterisks -= 2;
+            }
+        }
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 8 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //8. Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija. Vinies ilgis 8.5cm
 // (pilnai sulenda į lentą).
 //a) “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
