@@ -252,7 +252,20 @@ public class Main {
 
 //c) Tris kartus iš eilės iškritus herbui;
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 5.c užduotis ~~~~~~~~~~~~~~~~~~~~");
+        int consecutiveH = 0;
+        while (consecutiveH < 3) {
 
+            int coin = (int) Math.round(Math.random());
+
+            if (coin == 1) {
+                System.out.println("S");
+                consecutiveH = 0;
+
+            } else {
+                System.out.println("H");
+                consecutiveH++;
+            }
+        }
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 6 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //6. Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
