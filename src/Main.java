@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Main {
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //3.Sukurkite masyvą iš dešimties augalų pavadinimų.
 
-        String[] plants = {"rožė", "tulpė", "orchidėja", "beržas", "ąžuolas", "gluosnis", "alyva", "raskila", "klevas", "begonija"};
+        String[] plants = {"rožė", "tulpė", "orchidėja", "beržas", "ąžuolas", "gluosnis", "alyva", "chrizantema", "klevas", "begonija"};
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 4 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //4.Atspausdinkite kiekvieną 3čio uždavinio augalą atskiroje eilutėje.
@@ -129,7 +129,6 @@ public class Main {
         int[] randomArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
             randomArray[i] = (int) Math.round(Math.random() * 300);
-            ;
         }
         System.out.println("Random assigned values of Array are: ");
 
@@ -165,9 +164,9 @@ public class Main {
 
         String solution = "";
         for (int i = 77; i < 3001; i += 77) {
-            solution += i + ",";
+            solution += i + ", ";
         }
-
+        System.out.println(solution.substring(0, solution.length() - 2));
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //3. Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
@@ -294,7 +293,7 @@ public class Main {
             } else if (petrasTotal >= 222) {
                 System.out.println("Partiją laimėjo: " + petras);
                 break;
-            } else if (kazysTotal >= 222) {
+            } else {
                 System.out.println("Partiją laimėjo: " + kazys);
                 break;
             }
@@ -336,10 +335,24 @@ public class Main {
 //b) “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite
 // Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
 
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 9 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //9. Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti
 // unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius
 // (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo
 // mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
+        int min = 1;
+        int max = 200;
+        String[] rndNumbers = new String[50];
+
+        for (int i = 0; i < 50; i++) {
+            rndNumbers[i] = String.valueOf((int) (min + Math.round(Math.random() * (max - min))));
+            System.out.print(rndNumbers[i] + " ");
+            for (int j = 0; j < i; j++) {
+                if (Objects.equals(rndNumbers[i], rndNumbers[j])) {
+                    i--;
+                }
+            }
+        }
 
 
     }
