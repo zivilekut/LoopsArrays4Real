@@ -255,7 +255,41 @@ public class Main {
 //c) Tris kartus iš eilės iškritus herbui;
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 5.c užduotis ~~~~~~~~~~~~~~~~~~~~");
 
-//6. Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25. Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”. Taškų kiekį generuokite funkcija ​Math.random()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus. Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 6 užduotis ~~~~~~~~~~~~~~~~~~~~");
+//6. Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
+// Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: "laimėtojo vardas”. Taškų kiekį
+// generuokite funkcija Math.random(). Žaidimą laimi tas, kas greičiau surenka 222 taškus. Partijas kartoti tol, kol
+// kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+        int petrasMin = 10;
+        int petrasMax = 20;
+        int kazysMin = 5;
+        int kazysMax = 25;
+        int petrasTotal = 0;
+        int kazysTotal = 0;
+        String petras = "Petras";
+        String kazys = "Kazys";
+
+        while (true) {
+            int petrasPoints = (int) (petrasMin + Math.round(Math.random() * (petrasMax - petrasMin)));
+            int kazysPoints = (int) (kazysMin + Math.round(Math.random() * (kazysMax - kazysMin)));
+
+            if (petrasTotal < 222 && kazysTotal < 222) {
+                petrasTotal += petrasPoints;
+                kazysTotal += kazysPoints;
+
+            } else if (petrasTotal >= 222) {
+                System.out.println("Partiją laimėjo: " + petras);
+                break;
+            } else if (kazysTotal >= 222) {
+                System.out.println("Partiją laimėjo: " + kazys);
+                break;
+            }
+            System.out.print("Petro taskai: " + petrasPoints);
+            System.out.println();
+            System.out.print("Kazio taskai: " + kazysPoints);
+            System.out.println();
+        }
+
 //7. Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas), kurio aukštis 21 eilutė.
 //
 //8. Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija. Vinies ilgis 8.5cm (pilnai sulenda į lentą).
