@@ -92,7 +92,6 @@ public class Main {
             if (plant.length() < 5) {
                 count5++;
             }
-
         }
 
         System.out.println("Number of words with less than 5 characters: " + count5);
@@ -102,7 +101,6 @@ public class Main {
             if (plant.length() > 7) {
                 count7++;
             }
-
         }
 
         System.out.println("Number of words with more than 7 characters: " + count7);
@@ -255,6 +253,7 @@ public class Main {
 //c) Tris kartus iš eilės iškritus herbui;
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 5.c užduotis ~~~~~~~~~~~~~~~~~~~~");
 
+
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 6 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //6. Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
 // Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: "laimėtojo vardas”. Taškų kiekį
@@ -268,10 +267,12 @@ public class Main {
         int kazysTotal = 0;
         String petras = "Petras";
         String kazys = "Kazys";
+        int petrasPoints;
+        int kazysPoints;
 
         while (true) {
-            int petrasPoints = (int) (petrasMin + Math.round(Math.random() * (petrasMax - petrasMin)));
-            int kazysPoints = (int) (kazysMin + Math.round(Math.random() * (kazysMax - kazysMin)));
+            petrasPoints = (int) (petrasMin + Math.round(Math.random() * (petrasMax - petrasMin)));
+            kazysPoints = (int) (kazysMin + Math.round(Math.random() * (kazysMax - kazysMin)));
 
             if (petrasTotal < 222 && kazysTotal < 222) {
                 petrasTotal += petrasPoints;
@@ -284,18 +285,27 @@ public class Main {
                 System.out.println("Partiją laimėjo: " + kazys);
                 break;
             }
-            System.out.print("Petro taskai: " + petrasPoints);
-            System.out.println();
-            System.out.print("Kazio taskai: " + kazysPoints);
-            System.out.println();
         }
+        System.out.print("Petro taškai: " + petrasTotal);
+        System.out.println();
+        System.out.print("Kazio taškai: " + kazysTotal);
+        System.out.println();
 
-//7. Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas), kurio aukštis 21 eilutė.
-//
-//8. Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija. Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+//7. Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas),
+// kurio aukštis 21 eilutė.
+
+        int numRows = 21;
+
+//8. Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami Math.random() funkcija. Vinies ilgis 8.5cm
+// (pilnai sulenda į lentą).
 //a) “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
-//b) “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
-//9. Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
+//b) “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite
+// Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+
+//9. Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti
+// unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius
+// (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo
+// mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
 
 
     }
