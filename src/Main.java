@@ -340,17 +340,36 @@ public class Main {
 // unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius
 // (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo
 // mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
+
         int min = 1;
         int max = 200;
-        String[] rndNumbers = new String[50];
+        int[] rndNumbers = new int[50];
 
         for (int i = 0; i < 50; i++) {
-            rndNumbers[i] = String.valueOf((int) (min + Math.round(Math.random() * (max - min))));
-            System.out.print(rndNumbers[i] + " ");
-            for (int j = 0; j < i; j++) {
-                if (Objects.equals(rndNumbers[i], rndNumbers[j])) {
-                    i--;
+            int randomNumber;
+            boolean isUnique;
+
+            do {
+                isUnique = true;
+                randomNumber = (int) (min + Math.round(Math.random() * (max - min)));
+
+                for (int j = 0; j < i; j++) {
+                    if (rndNumbers[j] == randomNumber) {
+                        isUnique = false;
+                        break;
+                    }
                 }
+            } while (!isUnique);
+
+            rndNumbers[i] = randomNumber;
+            System.out.print(rndNumbers[i] + " ");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 50; i++) {
+            if (rndNumbers[i] % rndNumbers[i] == 0 && rndNumbers[i] % 1 == 0) {
+                System.out.print(rndNumbers[i] + " ");
             }
         }
 
