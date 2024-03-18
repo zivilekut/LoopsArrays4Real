@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class Main {
@@ -345,6 +346,7 @@ public class Main {
         int max = 200;
         int[] rndNumbers = new int[50];
 
+        System.out.println("Sugeneruoti skaičiai: ");
         for (int i = 0; i < 50; i++) {
             int randomNumber;
             boolean isUnique;
@@ -367,8 +369,9 @@ public class Main {
 
         System.out.println();
 
+        System.out.println("Pirminiai skaičiai: ");
         for (int i = 0; i < 50; i++) {
-            if (rndNumbers[i] % rndNumbers[i] == 0 && rndNumbers[i] % 1 == 0) {
+            if (rndNumbers[i] % 2 != 0 && rndNumbers[i] % 3 != 0 && rndNumbers[i] % 5 != 0 && rndNumbers[i] % 7 != 0 || (rndNumbers[i] == 2 || rndNumbers[i] == 3 || rndNumbers[i] == 5 || rndNumbers[i] == 7)) {
                 System.out.print(rndNumbers[i] + " ");
             }
         }
