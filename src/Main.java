@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         /*ciklai:
@@ -72,10 +74,10 @@ public class Main {
 //8.Sukurkite ciklą kuris suktųsi nuo 0 iki 20. Suskaičiuokite, kiek kartų kintamasis i turėjo porinę reikšmę;
         int counter = 0;
         for (int i = 0; i < 21; i++) {
-            if (i % 2 != 0) {
-                continue;
+            if (i % 2 == 0) {
+                counter++;
             }
-            counter++;
+
             System.out.println(i);
 
         }
@@ -162,6 +164,13 @@ public class Main {
             }
         }
         System.out.println();
+
+        String solution = "";
+        for (int i = 77; i < 3001; i += 77) {
+            solution += i + ",";
+        }
+
+
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 3 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //3. Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
 //* * * * * * * * * * *
@@ -214,6 +223,37 @@ public class Main {
 //b) Tris kartus iškritus herbui;
 //c) Tris kartus iš eilės iškritus herbui;
 
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 5.a užduotis ~~~~~~~~~~~~~~~~~~~~");
+        while (true) {
+            int coin = (int) Math.round(Math.random());
+
+            if (coin == 1) {
+                System.out.println("S");
+            } else {
+                System.out.println("H");
+                break;
+            }
+        }
+//b) Tris kartus iškritus herbui;
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 5.b užduotis ~~~~~~~~~~~~~~~~~~~~");
+
+        int countH = 0;
+        while (true) {
+            int coin = (int) Math.round(Math.random());
+
+            if (coin == 1) {
+                System.out.println("S");
+            } else {
+                System.out.println("H");
+                countH++;
+                if (countH == 3) {
+                    break;
+                }
+            }
+        }
+
+//c) Tris kartus iš eilės iškritus herbui;
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 5.c užduotis ~~~~~~~~~~~~~~~~~~~~");
 
 //6. Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25. Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”. Taškų kiekį generuokite funkcija ​Math.random()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus. Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
 //7. Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas), kurio aukštis 21 eilutė.
