@@ -51,10 +51,9 @@ public class Main {
 //6.Atspausdinkite kas antrą skaičių nuo 10 iki 50 (porinius);
 
         for (int i = 10; i < 51; i++) {
-            if (i % 2 != 0) {
-                continue;
+            if (i % 2 == 0) {
+                System.out.println(i);
             }
-            System.out.println(i);
         }
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 7 užduotis ~~~~~~~~~~~~~~~~~~~~");
@@ -208,10 +207,14 @@ public class Main {
         }
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 5 užduotis ~~~~~~~~~~~~~~~~~~~~");
-//5. Metam monetą. Monetos kritimo rezultatą imituojam Math.random() funkcija, kur 0 yra herbas, o 1 - skaičius. Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas. Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+//5. Metam monetą. Monetos kritimo rezultatą imituojam Math.random() funkcija, kur 0 yra herbas, o 1 - skaičius.
+// Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+// Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
 //a) Iškritus herbui;
 //b) Tris kartus iškritus herbui;
 //c) Tris kartus iš eilės iškritus herbui;
+
+
 //6. Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25. Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”. Taškų kiekį generuokite funkcija ​Math.random()​. Žaidimą laimi tas, kas greičiau surenka 222 taškus. Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
 //7. Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas), kurio aukštis 21 eilutė.
 //
