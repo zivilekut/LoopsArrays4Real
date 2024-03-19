@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -335,6 +333,19 @@ public class Main {
 //a) “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
 //b) “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite
 // Math.random() funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 8.a užduotis ~~~~~~~~~~~~~~~~~~~~");
+
+        int nailLength = 85;
+        int hitMinSmall = 5;
+        int hitMaxSmall = 20;
+        int hitSmall = (int) (hitMinSmall + Math.round(Math.random() * (hitMaxSmall - hitMinSmall)));
+        int hitSmallNumber = 0;
+
+        System.out.println("~~~~~~~~~~~~~~~~~~~~ 8.b užduotis ~~~~~~~~~~~~~~~~~~~~");
+        int hitMinBig = 20;
+        int hitMaxBig = 30;
+        int hitBig = (int) (hitMinBig + Math.round(Math.random() * (hitMaxBig - hitMinBig)));
+        int hitBigNumber = 0;
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~ 9 užduotis ~~~~~~~~~~~~~~~~~~~~");
 //9. Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti
@@ -344,9 +355,9 @@ public class Main {
 
         int min = 1;
         int max = 200;
-        int[] rndNumbers = new int[50];
 
         System.out.println("Sugeneruoti skaičiai: ");
+        int[] rndNumbers = new int[50];
         for (int i = 0; i < 50; i++) {
             int randomNumber;
             boolean isUnique;
@@ -371,7 +382,9 @@ public class Main {
 
         System.out.println("Pirminiai skaičiai: ");
         for (int i = 0; i < 50; i++) {
-            if (rndNumbers[i] % 2 != 0 && rndNumbers[i] % 3 != 0 && rndNumbers[i] % 5 != 0 && rndNumbers[i] % 7 != 0 || (rndNumbers[i] == 2 || rndNumbers[i] == 3 || rndNumbers[i] == 5 || rndNumbers[i] == 7)) {
+            if (rndNumbers[i] % 2 != 0 && rndNumbers[i] % 3 != 0 &&
+                    rndNumbers[i] % 5 != 0 && rndNumbers[i] % 7 != 0 ||
+                    (rndNumbers[i] == 2 || rndNumbers[i] == 3 || rndNumbers[i] == 5 || rndNumbers[i] == 7)) {
                 System.out.print(rndNumbers[i] + " ");
             }
         }
